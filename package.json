@@ -1,0 +1,22 @@
+{
+  "name": "todos-and-expenses",
+  "version": "1.0.0",
+  "description": "Another project I will not finish anyway. But it would have helped me.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othman853/idk-what-iam-doing-with-my-life.git"
+  },
+  "keywords": [
+    "another-unfinished-project"
+  ],
+  "author": "othman853",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/othman853/idk-what-iam-doing-with-my-life/issues"
+  },
+  "homepage": "https://github.com/othman853/idk-what-iam-doing-with-my-life#readme"
+}
