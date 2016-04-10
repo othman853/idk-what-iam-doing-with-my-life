@@ -1,6 +1,13 @@
-var load = require('./loader.js');
-var server = load('./server');
+var load = require('express-load');
+var express = require('express');
+var http = require('http');
 
-console.log('After loading: ');
-console.log(require('util').inspect(server, { depth: null }));
-console.log('After loading END ');
+var app = express();
+var server = http.createServer(app);
+
+app.set('view engine', 'ejs');
+
+load('routes')
+  .into(app);
+
+server.listen(3000, () => console.log('Up on port 3000'));
