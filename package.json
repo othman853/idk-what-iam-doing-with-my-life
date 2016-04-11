@@ -4,7 +4,8 @@
   "description": "Another project I will not finish anyway. But it would have helped me.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/othman853/idk-what-iam-doing-with-my-life#readme",
   "dependencies": {
+    "bower": "^1.7.9",
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "express-load": "^1.1.15",

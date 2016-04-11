@@ -1,0 +1,25 @@
+{
+  "name": "todos-and-expenses",
+  "description": "Another project I will not finish anyway. But it would have helped me.",
+  "main": "app.js",
+  "authors": [
+    "othman853"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "another-unfinished-project"
+  ],
+  "homepage": "https://github.com/othman853/idk-what-iam-doing-with-my-life",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
