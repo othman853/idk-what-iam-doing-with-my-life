@@ -4,9 +4,9 @@ var handlebars = require('express-handlebars');
 var mongoose = require('mongoose');
 var express = require('express');
 var http = require('http');
-
 var app = express();
 var server = http.createServer(app);
+var socketServer = require('socket.io')(server);
 
 if (!process.env.TODOS_AND_EXPENSES_DB_URL) {
   console
@@ -33,4 +33,13 @@ global.database = mongoose.connect(process.env.TODOS_AND_EXPENSES_DB_URL, (error
 
   server.listen(3000, () => console.log('Up on port 3000'));
 
+  socketServer.on('connection', (client) => {
+
+    console.log('Socket Connected.');
+    client.emit('some response', {title: 'You have been listened.'});
+
+    client.on('new todo', (todo) => {
+      console.log('Todo data received :: ', todo);
+    });
+  });
 });

@@ -1,6 +1,11 @@
 var React = require('react');
-var App = React.createFactory(require('./js/App.jsx'));
+var ReactDOM = require('react-dom');
+var App = React.createFactory(require('./components/App.jsx'));
 
 if (typeof window !== 'undefined') {
-  window.onload = () => React.render(App(), document.getElementById('render-here'));
+
+  window.onload = function () {
+    ReactDOM.render(App(), document.getElementById('render-here'));
+  }
+
 }

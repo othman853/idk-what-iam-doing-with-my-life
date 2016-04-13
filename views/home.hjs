@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Todos and Expenses</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.js"></script>
+    <script src="bundle.js" charset="utf-8"></script>
   </head>
   <body>
     <div id="render-here">

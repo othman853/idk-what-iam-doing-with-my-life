@@ -8,9 +8,21 @@ var TodoList = React.createClass({
     };
   },
 
+  componentDidMount: function() {
+    document
+      .getElementById('new-item-button')
+      .addEventListener('click', this.newItem);
+
+    this.props.server.on('some response', this.handleSomeResponse);
+  },
+
+  handleSomeResponse: function(data) {
+    console.log('Some response was handled: ' + data);
+    this.setState(data);
+  },
+
   newItem: function () {
-    console.log("New Item Button was clicked.");
-    alert('Oh Shit!');
+    this.props.server.emit('new todo', {name: 'A Todo'})
   },
 
   render: function () {
@@ -20,7 +32,7 @@ var TodoList = React.createClass({
           {this.state.title}
         </h1>
 
-        <button onClick={() => console.log('jjjj')}>New Item</button>
+        <button id="new-item-button"> New Item</button>
       </div>
     );
   }
