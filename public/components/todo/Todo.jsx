@@ -1,6 +1,6 @@
 var React = require('react');
 
-var TodoList = React.createClass({
+var Todo = React.createClass({
 
   getInitialState: function (){
     return {
@@ -17,7 +17,6 @@ var TodoList = React.createClass({
   },
 
   handleSomeResponse: function(data) {
-    console.log('Some response was handled: ' + data);
     this.setState(data);
   },
 
@@ -39,4 +38,4 @@ var TodoList = React.createClass({
 
 });
 
-module.exports = TodoList;
+module.exports = Todo;

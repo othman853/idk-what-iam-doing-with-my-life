@@ -1,8 +1,8 @@
 var path = require("path");
 
 module.exports = [{
-  context: path.join(__dirname, "public"),
-  entry: "app",
+  context: path.join(__dirname, "public", "components"),
+  entry: "main",
   output: {
     path: path.join(__dirname, "public"),
     filename: "bundle.js"
@@ -14,7 +14,7 @@ module.exports = [{
   },
   resolve: {
     extensions: ["", ".js", ".jsx"],
-    root: [path.join(__dirname, "public")],
+    root: [path.join(__dirname, "public", "components")],
     modulesDirectories: ["node_modules"]
   }
 }];

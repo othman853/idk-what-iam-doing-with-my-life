@@ -1,5 +1,5 @@
 var React = require('react');
-var TodoList = require('./TodoList.jsx');
+var Todo = require('./todo/Todo.jsx');
 
 var App = React.createClass({
 
@@ -10,10 +10,9 @@ var App = React.createClass({
   },
 
   render: function () {
-    this.state.socketServer.emit('new todo', {name: 'Yo'});
 
     return (
-      <TodoList server={this.state.socketServer}/>
+      <Todo server={this.state.socketServer}/>
     );
   }
 
